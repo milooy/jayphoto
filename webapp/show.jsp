@@ -7,13 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>사진올리기</h1>
-	<form action="/board" method="post" enctype="multipart/form-data">
-		제목 : <input type="text" name="title"><br>
-		<textarea rows="5" cols="30" name="contents"></textarea>
-		
-		<input type="file" name="file" size=30><br>
-		<input type="submit" value="Upload File" />
-	</form>
+	<h1>${board.title}</h1>
+	<div>
+	${board.contents}
+	</div>
+
 </body>
 </html>
