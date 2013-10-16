@@ -16,7 +16,6 @@
 
 		<h2>수정 사항</h2>
 		<form action="/board/${board.id}/complete" method="post" enctype="multipart/form-data">
-			제목 : <input type="text" name="title" size=40> <br />
 			<textarea name="contents" rows="10" cols="50">내용 </textarea>
 			<br /> <input type="file" name="imageName"> <input type="submit" value="수정완료">
 		</form>

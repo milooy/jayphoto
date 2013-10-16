@@ -25,7 +25,6 @@ public class BoardController {
 	
 	@RequestMapping("/board/form")
 	public String form() {
-		System.out.println("라라라ㅓ라어");
 		return "form";
 	}
 
@@ -45,8 +44,8 @@ public class BoardController {
 
 	@RequestMapping(value = "/board/{id}/complete", method = RequestMethod.POST)
 	public String modifiyComplete(@PathVariable Long id, Board board,
-			MultipartFile imageName) {
-		String newFileName = FileUploader.upload(imageName);
+			MultipartFile file) {
+		String newFileName = FileUploader.upload(file);
 		Board originBoard = boardRepository.findOne(id);
 
 		originBoard.setFileName(newFileName);
@@ -55,7 +54,8 @@ public class BoardController {
 
 		boardRepository.save(originBoard);
 
-		return "redirect:/board/" + id;
+//		return "redirect:/board/" + id;
+		return "redirect:/board/" + originBoard.getId();
 	}
 
 	@RequestMapping(value = "/board", method = RequestMethod.POST)
