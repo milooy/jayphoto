@@ -8,9 +8,17 @@
 </head>
 <body>
 	<h1>${board.title}</h1>
-	<div>
-	${board.contents}
-	</div>
+	 <br /> 내용 : ${board.contents}
+        <br /> 이미지 :
+        <img src="/images/${board.fileName}" height="200" width="200" />
+
+        <form name="modifiy" method="post" action="/board/${board.id}/modifiy">
+                <input type="submit" value="내용수정">
+        </form>
+
+        <form name="delete" method="post" action="/board/${board.id}/delete">
+                <input type="submit" value="삭제">
+        </form>
 
 </body>
 </html>

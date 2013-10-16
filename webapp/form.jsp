@@ -10,7 +10,7 @@
 <h1>사진올려버렷!</h1>
 	<form action="/board" method="post" enctype="multipart/form-data">
 		제목 : <input type="text" name="title"><br>
-		<textarea rows="5" cols="30" name="contents"></textarea>
+		<textarea rows="5" cols="30" name="contents">라라루리라 </textarea>
 		
 		<input type="file" name="file" size=30><br>
 		<input type="submit" value="Upload File" />
