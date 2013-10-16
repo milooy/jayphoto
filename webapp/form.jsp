@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>사진올리기</h1>
+<h1>사진올려버렷!</h1>
 	<form action="/board" method="post" enctype="multipart/form-data">
 		제목 : <input type="text" name="title"><br>
 		<textarea rows="5" cols="30" name="contents"></textarea>
