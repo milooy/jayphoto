@@ -1,0 +1,68 @@
+html {
+	background-color: #FFD073;
+}
+
+#topHead {
+	text-align: center;
+	font-size: 300%;
+	
+	
+}
+
+#center {
+	text-align: center;
+}
+
+div#wrap {
+	width: 600px;
+	border: 1px solid #FFAA00;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFAA00;
+	border-radius: 10em;
+	margin-top: 150px;
+}
+
+#formArea {
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #1D7373;
+	border-radius: 10em;
+	padding : 50px;
+}
+
+#topList {
+	margin-left: 80%;
+}
+
+#button {
+	text-align: right;
+	margin-left : 70%;
+	padding : 10px;
+}
+
+#commentList {
+	background-color: #FFD073;
+	border-radius: 10em;
+	padding: 30px;
+	margin : 100px;
+	
+}
+
+div#comment {
+	width: 600px;
+	margin: 0 auto;
+	margin-top : 30px;
+	
+}
+
+#comment span {
+	float: right;
+	padding: 10px;
+}
+
+#button form {
+	display: inline-block;
+	
+}

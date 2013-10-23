@@ -1,0 +1,74 @@
+html {
+	background-color: #FFD073;
+}
+
+#center {
+	text-align: center;
+}
+
+div#wrap {
+	width: 600px;
+	border: 1px solid #FFAA00;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFAA00;
+	border-radius: 10em;
+	margin-top: 30px;
+}
+
+#topList {
+	margin-left: 120%;
+}
+
+#button {
+	text-align: right;
+	margin-left : 70%;
+	padding : 10px;
+}
+
+#commentList {
+	background-color: #FFD073;
+	border-radius: 10em;
+	padding: 30px;
+	margin : 100px;
+	
+}
+
+div#comment {
+	width: 600px;
+	margin: 0 auto;
+	margin-top : 30px;
+	
+}
+
+#comment span {
+	float: right;
+	padding: 10px;
+}
+
+#button form {
+	display: inline-block;
+	
+}
+
+.bubble{
+	position:relative;
+	1display: inline-block;
+}
+.bubble .label{
+	width: 300px;
+	color:#ffffff;
+	background-color:#66aa11;
+	border-radius:10px;
+	padding:10px;
+}
+.bubble .tail{
+	left:50%;
+	margin-left:-18px;
+	border-right :18px solid transparent;
+	border-top:18px solid #66aa11;
+	border-left : 18px solid transparent;
+	position:absolute;
+	bottom:-18px;
+	width:0; height:0;
+}

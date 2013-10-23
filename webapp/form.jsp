@@ -1,19 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel= "stylesheet" media="screen" type="text/css" href="/stylesheets/newWrite.css" />
 </head>
 <body>
-<h1>사진올려버렷!</h1>
+<div id="wrap">
+	<header>
+		<h1><b>사진올려버렷!</b></h1>
+	</header>
+	
+	<div id="formArea">
 	<form action="/board" method="post" enctype="multipart/form-data">
-		제목 : <input type="text" name="title"><br>
-		<textarea rows="5" cols="30" name="contents">라라루리라 </textarea>
+		<div id=title>
+			제목 : <input type="text" name="title"><br>
+		</div>
+		<textarea rows="13" cols="30" name="contents" placeholder="예쁜 글을 남겨주세요~"></textarea>
 		
-		<input type="file" name="file" size=30><br>
+		<input type="file" name="file" size=30 />
 		<input type="submit" value="Upload File" />
+		
 	</form>
+	</div>
+</div>
 </body>
 </html>
