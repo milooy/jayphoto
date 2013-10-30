@@ -1,17 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<form>
-		id : <input type="text" name="firstname"> <br>
-		passwd : <input type="password" name="lastname">
-	</form>
-	<a href="/board/form">Login and set Photo!</a>
+  <head>
+    <meta charset="utf-8">
+    <title>Doughnut</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/newIndex.css" />
+    </head>
+  
+	<body>
+	<h1>DOUGHNUT</h1>
+	
+	<div id="wrapper">
+    	<div id="loginform">
+			<form>
+    		<label for="usermail">Email</label>
+    		<input type="email" name="usermail" placeholder="yourname@email.com" required><br>
+    		<label for="password">Password</label>
+   			<input type="password" name="password" placeholder="password" required><br>
+   			<a href="/board/form">Login</a>
+   			</form>
+    	    	
 
-</body>
+    	</div>
+	</div>
+	</body>
 </html>

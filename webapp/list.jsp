@@ -7,6 +7,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>리스트지롱</title>
 <link rel= "stylesheet" media="screen" type="text/css" href="/stylesheets/newList.css" />
+<script>
+	function initPage() {
+		console.log('로딩되버렸다...');
+		countComments();
+	}
+	
+	function countComments() {
+		//코딩하기 
+		var commentList = document.querySelectorAll('#commentList');
+		
+		for(var i=0; i<commentList.length; i++) {
+			var currentNode = commentList[i];
+			var nPlistCount = currentNode.querySelectorAll('p').length;
+			console.log(nPlistCount);
+		}
+		document.getElementById('commentNum').innerHTML=nPlistCount;
+	}
+	window.onload = initPage;
+</script>
+
 </head>
 <body>
 
@@ -66,13 +86,22 @@
 		
 	</div>
 	
+	<div id="commentNum">
+		댓글수: 11111111111111111111111
+	</div>	
+
+
 	<div id="commentList">
+		
 		<!-- 댓글달기 -->
 		<c:forEach items="${board.getComments()}" var="board"> 
+		<p>
 		    ${board.contents}<br />
-			<hr />
+		</p>
+		<hr />
 		</c:forEach>
 	</div>
+	
 	
 </div>
 

@@ -72,3 +72,16 @@ div#comment {
 	bottom:-18px;
 	width:0; height:0;
 }
+
+#commentNum {
+	float: left;
+}
+
+.commentClick {
+	float: right;
+}
+
+#commentArea {
+	display: none;
+}
+

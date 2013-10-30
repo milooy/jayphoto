@@ -8,6 +8,50 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>보여주는 페이지</title>
 <link rel= "stylesheet" media="screen" type="text/css" href="/stylesheets/newShow.css" />
+
+<script>
+	function initPage() {
+		console.log('로딩되버렸다...');
+		countComments();
+		registerEvents();
+	}
+	
+	function countComments() {
+		//코딩하기 
+		var commentList = document.querySelectorAll('#commentArea');
+		
+		for(var i=0; i<commentList.length; i++) {
+			var currentNode = commentList[i];
+			var nPlistCount = currentNode.querySelectorAll('p').length;
+			console.log(nPlistCount);
+		}
+		document.getElementById('commentNum').innerHTML="댓글수: " + nPlistCount;
+	}
+	
+	function registerEvents(){
+		//이벤트 추가하기 
+		var eleList = document.getElementsByClassName('commentClick');	 
+		for(var i=0; i<eleList.length; i++) {
+			eleList[i].addEventListener('click', toggleComments, false);
+		}
+	}
+	
+	function toggleComments(e) {
+		var commentBodyNode = e.target.parentNode.nextElementSibling;
+		var ssstyle = getComputedStyle(commentBodyNode).display;
+		
+		if(ssstyle=="none") {
+			commentBodyNode.style.display = "inherit";
+		} else {
+			commentBodyNode.style.display = "none";
+		} 
+		e.preventDefault();	//a태그클릭했을때 스크롤이동방지 
+		
+	}
+	
+	window.onload = initPage;
+</script>
+
 </head>
 
 <body>
@@ -45,22 +89,34 @@
 		
 	</div>
 	
-	<div id="commentList">
-		<!-- 댓글달기 -->
-		<c:forEach items="${board.getComments()}" var="board"> 
-		    ${board.contents}<br />
-			<hr />
-		</c:forEach>
+	<div id="commentNum">
+	</div>	
+	
+	<div class = "commentClick">
+		<a href="#">댓글보여줘</a>
 	</div>
 	
-</div>
+	<div id="commentArea">	
+	
+		
+		<div id="commentList">
+			<!-- 댓글달기 -->
+			
+			<c:forEach items="${board.getComments()}" var="board"> 
+				<p>${board.contents}<br /></p>
+				<hr>
+			</c:forEach>
+		</div>
+		
+		<div id="comment">
+			<form name="comment" method="post" action="/board/${board.id}/comments">
+				<textarea name="contents" rows="3" cols="80" placeholder="Leave a comment"></textarea>
+				<span><input type="submit" value="댓글달기"></span>
+			</form>
+		</div>
+	</div>
 
-<div id="comment">
-	<form name="comment" method="post" action="/board/${board.id}/comments">
-		<textarea name="contents" rows="3" cols="80" placeholder="Leave a comment"></textarea>
-		<span><input type="submit" value="댓글달기"></span>
-	</form>
-</div>
 
+</div>
 </body>
 </html>
