@@ -113,12 +113,24 @@
 	
 	function writeComments(e){
 		e.preventDefault();	//submit이 자동으로 동작되는 것을 막는다 
-		console.log("heeheheheheheh");
-		var eleForm = e.currentTarget.form; //form element
+		var eleForm = e.currentTarget.form; //form element 
 		var oFormData = new FormData(eleForm); //form data들을 자동으로 묶어준다.
-		
 		var sID = eleForm[0].value; // 현재페이지의 ID값을 확인한다.
 		var url = "/board/" +sID + "/comments.json"; // 서버로 보낼 주소	
+		
+		var request = new XMLHttpRequest();
+		request.open("POST" , url, true);
+		
+		request.onreadystatechange = function() {
+			if(request.readyState ==4 && request.status ==200) {
+				/* console.log(“응답이 왔어요~”); */
+				var obj = JSON.parse(request.responseText);
+				var eleCommentList = eleForm.parentNode.previousElementSibling;
+		        eleCommentList.insertAdjacentHTML("beforeend" , "<p><span>"+ obj.contents +"</span></p>");
+			}; 
+		};
+		
+		request.send(oFormData);
 	}
 	
 	window.onload = initPage;
@@ -180,8 +192,10 @@
 		
 		<div id="comment">
 			<form name="comment" method="post" action="/board/${board.id}/comments">
+				<input type="hidden" name="id" value="${board.id}" />
 				<textarea name="contents" rows="3" cols="80" placeholder="Leave a comment"></textarea>
-				<span><input type="submit" value="댓글달기"></span>
+				<input type="submit" value="댓글쓰기"/>
+				<!-- <span><input type="submit" value="댓글달기"></span> -->
 			</form>
 		</div>
 	</div>
