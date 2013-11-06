@@ -3,6 +3,7 @@ package org.nhnnext.web;
 import org.nhnnext.repository.BoardRepository;
 import org.nhnnext.support.FileUploader;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +19,7 @@ public class BoardController {
 
 	@RequestMapping("/board")
 	public String list(Model model) {
-		model.addAttribute("boards", boardRepository.findAll());
+		model.addAttribute("boards", boardRepository.findOrderByIdDesc());
 		return "list";
 	}
 	

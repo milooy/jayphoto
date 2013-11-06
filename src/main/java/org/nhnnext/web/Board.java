@@ -35,7 +35,7 @@ public class Board {
 	public List<Comment> getComments() {
 		return comments;
 	}
-
+	
 	public String getTitle() {
 		return title;
 	}
