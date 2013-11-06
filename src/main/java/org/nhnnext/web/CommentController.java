@@ -20,14 +20,14 @@ public class CommentController {
 	
 	@Autowired
 	private CommentRepository commentRepository;
-//	
-//	@RequestMapping(value = "/board/{id}/comments", method = RequestMethod.POST)
-//	public String create(@PathVariable Long id, String contents) {
-//		Board board = boardRepository.findOne(id);
-//		Comment comment = new Comment(contents, board);
-//		commentRepository.save(comment);
-//		return "redirect:/board/" + id;
-//	}
+	
+	@RequestMapping(value = "/board/{id}/comments", method = RequestMethod.POST)
+	public String create(@PathVariable Long id, String contents) {
+		Board board = boardRepository.findOne(id);
+		Comment comment = new Comment(contents, board);
+		commentRepository.save(comment);
+		return "redirect:/board/" + id;
+	}
 	
 	@RequestMapping(value="/board/{id}/comments.json", method=RequestMethod.POST)
 	public @ResponseBody Comment createAndShow(@PathVariable Long id, String contents) {
