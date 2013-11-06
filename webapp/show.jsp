@@ -127,6 +127,7 @@
 				var obj = JSON.parse(request.responseText);
 				var eleCommentList = eleForm.parentNode.previousElementSibling;
 		        eleCommentList.insertAdjacentHTML("beforeend" , "<p><span>"+ obj.contents +"</span></p>");
+		        eleCommentList.insertAdjacentHTML("beforeend" , "<hr>");
 			}; 
 		};
 		
