@@ -66,3 +66,15 @@ div#comment {
 	display: inline-block;
 	
 }
+
+#commentNum {
+	float: left;
+}
+
+.commentClick {
+	float: right;
+}
+
+#commentArea {
+	display: none;
+}
