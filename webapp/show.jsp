@@ -112,9 +112,13 @@
 	}
 	
 	function writeComments(e){
-		e.preventDefault();
+		e.preventDefault();	//submit이 자동으로 동작되는 것을 막는다 
 		console.log("heeheheheheheh");
+		var eleForm = e.currentTarget.form; //form element
+		var oFormData = new FormData(eleForm); //form data들을 자동으로 묶어준다.
 		
+		var sID = eleForm[0].value; // 현재페이지의 ID값을 확인한다.
+		var url = "/board/" +sID + "/comments.json"; // 서버로 보낼 주소	
 	}
 	
 	window.onload = initPage;
