@@ -9,10 +9,11 @@
     </head>
   
 	<body>
+	<div id="roundline"><img src="./images/underline.png" width="850px"></div>
 	<div id="logo">Moves like Jaguar</div>
-	<span id="roundline"><img src="./images/roundline.png" width="800px"></span>
-	<br>
-	<span id="jaguar"><img src="./images/jaguar.gif"></span>
+	<br><br><br>
+	<img id="jaguar" src="./images/jaguar.gif">
+	<br><br>
 	
 	
 	<div id="wrapper">
@@ -22,12 +23,11 @@
     		<input type="email" name="id" placeholder="What's ur email?" required>
     		<label for="password">Password</label>
    			<input type="password" name="password" placeholder="What's ur password?" required>
-   			<a href="/board/form"><button class="btn">RUN</button></a>
-   			
+   			<a href="/board"><button class="btn">RUN</button></a>
    			</form>
-    	    	
-
     	</div>
 	</div>
+	
+	<footer>Copyright © 2013 by Jay Jin. All rights reserved</footer>
 	</body>
 </html>

@@ -15,7 +15,10 @@ html {
 }
 
 #roundline {
-	width: 100px;
+	position: fixed;
+	top:0;
+	left: 20%;
+	z-index: -1;
 }
 	
 /* #wrapper {
@@ -41,14 +44,14 @@ html {
 }
 
 #jaguar {
-	margin : 100px;
-	padding: 100px;
-	border-radius: 10em;
+	border-radius: 1em;
+	z-index: -2;
 }
 
 #loginform input {
 	
 	height: 25px;
+	border-radius: 3em;
 }
 
 .btn {
@@ -89,4 +92,8 @@ html {
 .btn:active {
 	box-shadow: 0 0 #ab3c3c;
 	top: 6px;
+}
+
+footer {
+	margin-top: 100px;
 }

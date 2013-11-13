@@ -4,10 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>리스트지롱</title>
-<link rel="stylesheet" media="screen" type="text/css"
-	href="/stylesheets/newList.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Timeline</title>
+	<link rel="stylesheet" media="screen" type="text/css" href="/stylesheets/newList.css" />
+	<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here' rel='stylesheet' type='text/css'>
+
 
 <script>
 	function initPage() {
@@ -84,18 +86,11 @@
 </head>
 <body>
 
-	<div
-		style="z-index: 99; top: 0px; left: 0px; right: 0px; position: absoulte !important; position: fixed;">
-		I've looked at things from both sides now.</div>
-
-
-	<div id="topHead">
-		<h1>Timeline</h1>
-	</div>
-
-	<span id="topList"> <a href="/board/form"><input
-			type="button" value="글쓰기" /></a>
-	</span>
+	<div style="z-index: 99; top: 0px; left: 0px; right: 0px; position: absoulte !important; position: fixed;">
+		<div id="roundline"><img src="./images/underline.png" width="850px"></div>
+		<div id="logo">Moves like Jaguar</div>
+		<span id="topList"> <a href="/board/form"><input type="button" value="글쓰기" /></a></span>
+	</div>	
 
 	<div id="wrap">
 		<div id="formArea">

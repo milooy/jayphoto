@@ -1,12 +1,19 @@
 html {
-	background-color: #FFD073;
+	background-color: #e2e1d8;
+	font-family: 'Patrick Hand SC';
 }
 
-#topHead {
+#logo {
+	font-family: 'Just Me Again Down Here';
+	font-size: 10em;
 	text-align: center;
-	font-size: 300%;
-	
-	
+}
+
+#roundline {
+	position: fixed;
+	top:0;
+	left: 20%;
+	z-index: -1;
 }
 
 #center {
@@ -14,6 +21,7 @@ html {
 }
 
 div#wrap {
+	margin-top:1000px;
 	width: 600px;
 	border: 1px solid #FFAA00;
 	margin-right: auto;
