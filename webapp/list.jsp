@@ -86,7 +86,7 @@
 
 	<div
 		style="z-index: 99; top: 0px; left: 0px; right: 0px; position: absoulte !important; position: fixed;">
-		상단바 고정. 로그아웃, 글쓰기 등등 들어간다.</div>
+		I've looked at things from both sides now.</div>
 
 
 	<div id="topHead">

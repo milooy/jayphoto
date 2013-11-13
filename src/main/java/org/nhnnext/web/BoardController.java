@@ -10,10 +10,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 @Controller
 public class BoardController {
+	private static final Logger log = LoggerFactory.getLogger(BoardController.class);
+	
+	
 	@Autowired
 	private BoardRepository boardRepository;
 
@@ -61,6 +66,8 @@ public class BoardController {
 
 	@RequestMapping(value = "/board", method = RequestMethod.POST)
 	public String create(Board board, MultipartFile file) {
+		log.debug("board : {}", board);
+		
 		System.out.println("board :" + board);
 
 		String fileName = FileUploader.upload(file); // FileUploader API를 활용해
