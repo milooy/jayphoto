@@ -21,7 +21,6 @@ html {
 }
 
 div#wrap {
-	margin-top:1000px;
 	width: 600px;
 	border: 1px solid #FFAA00;
 	margin-right: auto;
@@ -33,6 +32,7 @@ div#wrap {
 
 #formArea {
 	width: 500px;
+	margin-top: 300px;
 	margin-right: auto;
 	margin-left: auto;
 	background-color: #1D7373;
