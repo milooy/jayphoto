@@ -16,21 +16,63 @@ html {
 	z-index: -1;
 }
 
-#center {
-	text-align: center;
+#topList {
+	margin-left: 80%;
 }
 
-div#wrap {
-	width: 600px;
-	border: 1px solid #FFAA00;
-	margin-right: auto;
-	margin-left: auto;
-	background-color: #FFAA00;
-	border-radius: 10em;
-	margin-top: 150px;
+
+
+
+
+/* 홀수번째는 플로트를 롸이트로 바꿔준다. js에서. */
+#b_image {
+	float : left;
+	border-radius: 50%;
+	margin:10px;
 }
 
-#formArea {
+#boarditem {
+	padding: 200px;
+	padding-left: 250px;
+	clear: both;
+}
+
+#b_title {
+	font-family: 'Just Me Again Down Here';
+	font-weight: bold;
+	font-size: 3.5em;	
+	padding-top: 30px;
+	float:right;
+	margin-right: 130px;
+}
+
+#b_contents {
+	
+	font-size: 2em;
+	padding: 10px;
+	margin-right: 100px;
+	float:right;
+	color: #2B2D2F;
+	background-color: #C2C2C2;
+	border-radius: 0.5em;
+	width:30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*글쓰는페이지*/
+#formArea {*/
 	width: 500px;
 	margin-top: 300px;
 	margin-right: auto;
@@ -40,13 +82,29 @@ div#wrap {
 	padding : 50px;
 }
 
-#topList {
-	margin-left: 80%;
+#formArea input {
+	border-radius: 3em;
 }
 
+#formArea textarea {
+	border-radius: 2em;
+}
+
+#upload {
+	float:right;
+	margin-right:10px;
+}
+
+
+#leave {
+	text-align: center;
+	font-size: 3em;
+}
+
+
 #button {
-	text-align: right;
-	margin-left : 70%;
+	clear:both;
+	margin-left : 50%;
 	padding : 10px;
 }
 
@@ -86,3 +144,17 @@ div#comment {
 #commentArea {
 	display: none;
 }
+
+
+
+
+
+
+
+footer {
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: 100px;
+}
+
+

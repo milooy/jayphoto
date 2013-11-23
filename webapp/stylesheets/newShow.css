@@ -1,5 +1,7 @@
 html {
-	background-color: #FFD073;
+	background-color: #e2e1d8;
+	font-family: 'Patrick Hand SC';
+	text-align: center;
 }
 
 #center {
@@ -8,10 +10,8 @@ html {
 
 div#wrap {
 	width: 600px;
-	border: 1px solid #FFAA00;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: #FFAA00;
 	border-radius: 10em;
 	margin-top: 30px;
 }
@@ -55,7 +55,7 @@ div#comment {
 	position:relative;
 	1display: inline-block;
 }
-.bubble .label{
+.1bubble .label{
 	width: 300px;
 	color:#ffffff;
 	background-color:#66aa11;
@@ -84,4 +84,15 @@ div#comment {
 #commentArea {
 	display: none;
 }
+
+
+
+
+
+
+
+#b_image {
+	border-radius: 50%;
+}
+
 

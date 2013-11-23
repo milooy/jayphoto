@@ -28,6 +28,8 @@
     	</div>
 	</div>
 	
+	<div id="signup"><a href=""><b>Sign up</b></a> for a new account</div>
+	
 	<footer>Copyright © 2013 by Jay Jin. All rights reserved</footer>
 	</body>
 </html>

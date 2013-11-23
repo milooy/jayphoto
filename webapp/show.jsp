@@ -8,7 +8,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>보여주는 페이지</title>
 <link rel= "stylesheet" media="screen" type="text/css" href="/stylesheets/newShow.css" />
-
+<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here' rel='stylesheet' type='text/css'>
+ 
 <script>
 	//this fixes an issue with the old method, ambiguous values
 	//with this test document.cookie.indexOf( name + "=" );
@@ -123,7 +125,6 @@
 		
 		request.onreadystatechange = function() {
 			if(request.readyState ==4 && request.status ==200) {
-				/* console.log(“응답이 왔어요~”); */
 				var obj = JSON.parse(request.responseText);
 				var eleCommentList = eleForm.parentNode.previousElementSibling;
 		        eleCommentList.insertAdjacentHTML("beforeend" , "<p><span>"+ obj.contents +"</span></p>");
@@ -140,7 +141,7 @@
 </head>
 
 <body>
-<img src="../images/baby1.png" height="100">
+<img src="../images/baby1.png" height="200">
 <div id="wrap">
 	<span id="topList">
 		<a href="/board"><input type="button" value="리스트" /></a>
@@ -154,7 +155,7 @@
 		
 		<!-- 파일안올리면그림안보이기 아직구현못함  -->
 		<c:if test="${not empty board.fileName}">
-			<img src="/images/${board.fileName}" height="300" width="300" />
+			<img id="b_image" src="/images/${board.fileName}" height="400" width="400" />
 		</c:if>
 		<div class="bubble">
 			<p class="label">${board.contents}</p>
