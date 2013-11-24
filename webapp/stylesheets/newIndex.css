@@ -59,9 +59,9 @@ html {
 	display: inline-block;
 	font-weight: bold;
 	position: relative;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
 	background: #cb4e4e;
 	color: #fff;
 	box-shadow: 0 6px #ab3c3c;
@@ -74,23 +74,12 @@ html {
 	font-family: 'Patrick Hand SC';
 }
 
-/* .btn:after {
- position: absolute;
- z-index: -1;
- -webkit-transition: all 0.3s;
- -moz-transition: all 0.3s;
- transition: all 0.3s;
- } */
-
 .btn:hover {
 	box-shadow: 0 4px #ab3c3c;
 	top: 2px;
 }
 
-.btn:active {
-	box-shadow: 0 0 #ab3c3c;
-	top: 6px;
-}
+
 
 footer {
 	margin-top: 100px;

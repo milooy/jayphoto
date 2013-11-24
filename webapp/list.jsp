@@ -35,7 +35,7 @@
 
 	<!-- 위로가기 -->
 	<div style="z-index: 99; bottom: 5px; right: 5px; margin: 30px; position: absoulte !important; position: fixed;">
-		<span id="top"><a href="#"><img src="./images/top.png"></a></span>
+		<div id="top"><a href="#"><img src="./images/top.png">ho</img></a></div>
 	</div>
 		
 	<!--상단의 글쓰는페이지-->
@@ -48,6 +48,23 @@
 			<input type="file" name="file" size=30 /><input type="image" src="./images/upload.png" id="upload" type="submit" value="Upload" />
 		</form>
 	</div>
+
+
+	<ul class="ch-grid">
+		<li>
+        <div class="ch-item ch-img-1">
+            <div class="ch-info">
+                <h3>Use what you have</h3>
+                <p>by Angela Duncan <a href="http://drbl.in/eOPF">View on Dribbble</a></p>
+            </div>
+        </div>
+        </li>
+     </ul>
+
+
+
+
+
 
 	<!-- for문을 돌며 보드에 게시물을 하나씩 올리기.. -->
 	<c:forEach items="${boards}" var="board">

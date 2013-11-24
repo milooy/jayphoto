@@ -89,11 +89,25 @@ function testtest() {
 		console.log(e.layerX);
 		console.log(e.target.baseURI);
 		console.log(e.target.childNodes);
+		debugger;
 	}, false);
 	
-	document.getElementById('top').addEventListener('hover', function(e) {
-		e.
-	})
+	document.getElementById('top').addEventListener('mouseover', function(e) {
+		e.target.innerHTML="<a href=\"#\"><img src=\"./images/top2.png\">ho</img></a>";
+
+		console.log(e.target);
+		console.log(e.target.innerHTML);
+		console.log(e.target.baseURI);
+		console.log(e.target.childNodes);		
+//		debugger;
+		
+	}, false);
+	
+	document.getElementById('top').addEventListener('mouseout', function(e) {
+		e.target.innerHTML="<a href=\"#\"><img src=\"./images/top.png\">ho</img></a>";
+
+	
+	}, false);
 
 }
 
