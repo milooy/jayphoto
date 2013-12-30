@@ -49,18 +49,6 @@
 		</form>
 	</div>
 
-<!-- 테스트 -->
-	<!-- <ul class="ch-grid">
-		<li>
-        <div class="ch-item">
-            <div class="ch-info">
-                <h3>Use what you have</h3>
-                <p>by Angela Duncan <a href="http://drbl.in/eOPF">View on Dribbble</a></p>
-            </div>
-        </div>
-        </li>
-     </ul> -->
-
 
  	<c:forEach items="${boards}" var="board">
  	<div id="boarditem">
@@ -69,46 +57,52 @@
 	        <div class="ch-item" style="background-image: url(../images/${board.fileName}); background-size:400px 400px;">
 	            <div class="ch-info">
 	                <h3><div id="b_title">"${board.title}"</div></h3>
-	                <p>by Angela Duncan<a href="http://drbl.in/eOPF">View on Dribbble</a></p>
+	                <p>by Jay Jin<a href="http://drbl.in/eOPF">View</a></p>
 	            </div>
 	        </div>
 	        </li>
 	     </ul>
+	     <div id="contentBlock">
 	            <div id="b_title">"${board.title}"</div>
+	            <br>
 				<div id="b_contents">${board.contents}</div>
+		</div>
 				
 		<div id="button">
 				<form name="modifiy" method="post" action="/board/${board.id}/modifiy">
-				<input type="submit" value="내용수정">
+				<button class="btn">MODIFY</button>
 				</form>
 			
 			    <!-- 삭제도 구현해야함 -->
 				<form name="delete" method="post" action="/board/${board.id}/delete">
-					<input type="submit" value="삭제">
+				<button class="btn">DELETE</button>
+				</form>
+		</div>
+
+		
+			
+		<div class="commentNum"></div>	
+		<!-- <div class="commentClick"><a href="#"><img src="./images/comment.png">라라</a></div> -->
+		
+		<div class = "commentClick"><a href="#">댓글보여줘</a></div>
+			
+		<div id="commentArea">	
+			<div id="commentList">
+			<!-- 댓글달기 -->
+				<c:forEach items="${board.getComments()}" var="comment"> 
+					<p>${comment.contents}<br /></p>
+					<hr>
+				</c:forEach>
+			</div>
+				
+			<div id="comment">
+				<form name="comment" method="post" action="/board/${board.id}/comments">
+					<textarea name="contents" rows="3" cols="80" placeholder="Leave a comment"></textarea>
+					<span><input type="submit" value="댓글달기"></span>
 				</form>
 			</div>
-			
-			<div class="commentNum"></div>	
-			<div class = "commentClick"><a href="#">댓글보여줘</a></div>
-			
-			<div id="commentArea">	
-				<div id="commentList">
-					<!-- 댓글달기 -->
-					
-					<c:forEach items="${board.getComments()}" var="comment"> 
-						<p>${comment.contents}<br /></p>
-						<hr>
-					</c:forEach>
-				</div>
 				
-				<div id="comment">
-					<form name="comment" method="post" action="/board/${board.id}/comments">
-						<textarea name="contents" rows="3" cols="80" placeholder="Leave a comment"></textarea>
-						<span><input type="submit" value="댓글달기"></span>
-					</form>
-				</div>
-				
-			</div>		
+		</div>		
 	</div>
 	</c:forEach> 
 

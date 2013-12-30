@@ -42,7 +42,6 @@ html {
 	font-weight: bold;
 	font-size: 3.5em;	
 	padding-top: 30px;
-	/*float:left;*/
 	display:inline-block;
 	margin-right: 30px;
 }
@@ -52,12 +51,13 @@ html {
 	font-size: 2em;
 	padding: 10px;
 	margin-right: 100px;
-	/*float:right;*/
 	display:inline-block;
 	color: #2B2D2F;
 	background-color: #C2C2C2;
 	border-radius: 0.5em;
-	width:30%;
+	width:250px;
+	height: 250px;
+	/*max-width: 100px;*/
 }
 
 
@@ -162,6 +162,9 @@ footer {
 
 
 
+#contentBlock {
+	float: right;
+}
 
 
 
@@ -174,6 +177,7 @@ footer {
     display: inline;
     text-align: center;
     width: 30%;
+    float: left;
 }
  
 .ch-grid:after,
@@ -271,3 +275,22 @@ footer {
     transform: scale(1);    
 }
 
+
+
+.btn {
+	padding: 20px;
+	display: inline-block;
+	text-transform: uppercase;
+	position: relative;
+	text-align: center;
+	color:#fff;
+	background:#C07130;
+	transition: none;
+	border: 2px dashed #C07130;
+	border-radius: 60px;
+	font-size: 0.8em;
+}
+
+.btn:hover {
+	border: 2px dashed #fff;
+}
